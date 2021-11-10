@@ -1,0 +1,32 @@
+.map {
+  &-container {
+    background: linear-gradient(to right, rgba(white, 0.9), rgba(white, 0.9)),
+      url("../images/img-map.png") no-repeat center/ cover;
+    min-height: 20rem;
+    position: relative;
+  }
+  &-info {
+    @include absoluteCenter("both");
+    color: $primary-color;
+    text-align: center;
+    padding-bottom: 1.8rem;
+    &::before {
+      content: "";
+      @include size(6.5rem, 3px);
+      background-color: $primary-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateX(50%);
+    }
+  }
+  &-icon {
+    padding-bottom: 1.8rem;
+    font-size: 2rem;
+  }
+  &-title {
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+}

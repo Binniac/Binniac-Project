@@ -1,0 +1,50 @@
+.about {
+  padding: 9rem 0 11rem 0;
+  background-color: #fff;
+  &-list {
+    margin-top: 10.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3rem;
+    @include maxWidth(767px) {
+      margin-top: 5rem;
+      grid-auto-columns: 80%;
+      grid-auto-flow: column;
+      grid-template-columns: unset;
+      grid-row-gap: 3rem;
+      overflow-x: auto;
+      padding: 1rem;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+    }
+  }
+
+  @include maxWidth(767px) {
+    scroll-snap-align: start;
+  }
+  &-icon {
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+  }
+  &-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2rem;
+    @include textClamp();
+  }
+  &-image {
+    @include size(100%);
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  &-content {
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+  @include maxWidth(767px) {
+    padding: 5rem 0 0 0;
+  }
+}
+@include hoverEffect();

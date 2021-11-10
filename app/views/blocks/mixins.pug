@@ -1,0 +1,90 @@
+mixin headerMenuItem(title,href="#")
+	li.header-menu-item
+		a.header-menu-link(href=href)= title
+mixin headerBottomItem(number,title)
+	.header-bottom-item
+		span.header-bottom-number= number
+		span.header-bottom-text= title
+mixin blockBox(caption,title,desc)
+		.block-box
+			h3.block-box-caption= caption
+			h2.block-box-title= title
+			if desc
+				p.block-box-desc= desc
+mixin aboutItem(src,title, iconClass,alt= "")
+	.about-item
+		img.about-image(src= src, alt= alt)
+		.about-content
+			i.about-icon(class= iconClass)
+			span.about-title= title
+mixin servicesItem(title,desc,icon)
+	.services-item
+		i.services-icon(class= icon)
+		.services-content
+			.services-title= title
+			.services-desc= desc
+mixin wedoItem(src,title,icon,desc,activate="")
+	.wedo-item(class=activate)
+		.wedo-item-primary
+			img.wedo-img(src= src)  
+			.wedo-title= title
+			i(class= icon).wedo-icon
+		.wedo-item-secondary
+			.wedo-item-desc=desc
+mixin socialItem(facebook="#",twitter="#",instagram="#",youtube="#")
+	ul.team-social-list
+		li.team-social-item
+			a(href=facebook)
+				i.fab.fa-facebook-f.team-icon 
+		li.team-social-item
+			a(href=twitter)
+				i.fab.fa-twitter.team-icon 
+		li.team-social-item
+			a(href=instagram)
+				i.fab.fa-instagram.team-icon 
+		li.team-social-item
+			a(href=youtube)
+				i.fab.fa-youtube.team-icon 
+mixin teamItem(src,name,work)
+	.team-item
+		.team-main
+			img(src=src, alt=alt).team-image
+			.team-social
+				if block
+					block
+		.team-author 
+			h4.team-name=name
+			span.team-work=work
+mixin workItem(src,icon,title,desc,alt="")
+	.work-item
+		img(src=src, alt=alt).work-image
+		.work-content
+			i(class=icon).work-icon 
+			h4.work-title=title
+			span.work-desc=desc
+mixin peopleItem(src,name,job,desc)
+	.people-item
+		.people-item-avata
+			img(src=src, alt="").people-image
+		.people-item-info
+			h4.people-name=name
+			.people-job 
+				span.people-job-text=job
+			.people-desc
+				p.people-desc-text=desc
+mixin blogItem(src,number,text,title,desc,eye,cmt)
+	.blog-item
+		.blog-item-media
+			img(src=src, alt="").blog-image
+			.blog-date
+				.blog-date-number=number
+				.blog-date-text=text
+		.blog-title=title 
+		p.blog-desc=desc
+		.blog-item-meta 
+			.blog-eye 
+				i.fa.fa-eye.blog-eye-icon
+				span.blog-count=eye     
+			.blog-comment 
+				i.fas.fa-comment-dots.blog-comment-icon
+				span.blog-count=cmt     

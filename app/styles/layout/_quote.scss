@@ -1,0 +1,78 @@
+.quote {
+  background-color: $gray-color;
+  padding: 7rem 0;
+  &-container {
+    @include flexbox(center, space-between);
+  }
+  &-icons {
+    padding: 2rem;
+    font-size: 3rem;
+    color: $gray-drak-color;
+  }
+  &-item {
+    @include flexbox(center);
+  }
+  &-info {
+    width: calc(100% - 15rem);
+  }
+  &-icon {
+    margin: 0 5.5rem;
+    padding: 2.5rem;
+    border: solid 4px $third-color;
+    @include size(15rem);
+  }
+  &-image {
+    @include size(100%);
+  }
+  &-text {
+    color: $gray-drak-color;
+    line-height: 1.5;
+    font-family: $secondart-font;
+    font-size: 2.4rem;
+    font-style: italic;
+    @include textClamp(3);
+    margin-bottom: 2rem;
+  }
+  &-author {
+    font-size: 2.4rem;
+    font-family: $third-font;
+    font-weight: 500;
+    position: relative;
+    padding-left: 7rem;
+    &::before {
+      content: "";
+      @include absoluteCenter("top");
+      background-color: $primary-color;
+      @include size(6rem, 0.4rem);
+      left: 0;
+    }
+  }
+  @include maxWidth(1023px) {
+    &-icon {
+      padding: 2rem;
+      width: 35rem;
+    }
+  }
+  @include maxWidth(767px) {
+    padding: 3rem 0;
+    &-item {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+    &-icon {
+      padding: 2rem;
+      width: 10rem;
+      margin-bottom: 2rem;
+    }
+    &-text {
+      display: block;
+    }
+    &-icons {
+      display: none;
+    }
+  }
+  .slick-initialized.slick-slider {
+    display: flex;
+  }
+}

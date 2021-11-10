@@ -1,0 +1,75 @@
+.work {
+  margin: 11rem 0 0 0;
+  &-grid {
+    margin: 11rem 0 0 0;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 39rem 39rem;
+    grid-template-areas:
+      "h1 h3 h5 h7"
+      "h2 h4 h5 h6";
+  }
+  &-image {
+    @include size(100%);
+  }
+  &-item {
+    height: 100%;
+    border-radius: 0;
+    &:first-child {
+      grid-area: h1;
+    }
+    &:nth-child(2) {
+      grid-area: h2;
+    }
+    &:nth-child(3) {
+      grid-area: h3;
+    }
+    &:nth-child(4) {
+      grid-area: h4;
+    }
+    &:nth-child(5) {
+      grid-area: h5;
+    }
+    &:nth-child(6) {
+      grid-area: h6;
+    }
+    &:last-child {
+      grid-area: h7;
+    }
+  }
+  &-content {
+    color: white;
+  }
+  &-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  &-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  &-desc {
+    font-size: 1.5rem;
+    font-family: $secondart-font;
+    font-style: italic;
+    font-weight: 300;
+  }
+  @include maxWidth(1439px) {
+    &-grid {
+      grid-template-rows: 30rem 30rem;
+    }
+  }
+  @include maxWidth(1023px) {
+    &-grid {
+      grid-template-rows: 25rem 25rem;
+    }
+  }
+  @include maxWidth(767px) {
+    &-grid {
+      display: block;
+    }
+  }
+}
+@include hoverEffect(".work-item", ".work-content", "false");

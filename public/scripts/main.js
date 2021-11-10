@@ -1,0 +1,1 @@
+"use strict";var menuToggle=document.querySelector(".header-icon"),menuHeader=document.querySelector(".header-menu"),expandClass="is-expand";menuToggle.addEventListener("click",function(){menuHeader.classList.add(expandClass)}),window.addEventListener("click",function(e){menuHeader.contains(e.target)||e.target.matches(".header-icon")||menuHeader.classList.remove(expandClass)});

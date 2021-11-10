@@ -1,0 +1,16 @@
+.logo {
+  background-color: $gray-color;
+  &-images {
+    padding: 6.8rem 0;
+  }
+  @include maxWidth(1023px) {
+    &-images {
+      padding: 4rem 0;
+    }
+  }
+  @include maxWidth(767px) {
+    &-images {
+      padding: 2rem 0;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.services {
+  margin: 10rem 0;
+  &-list {
+    // @include flexbox(stretch, flex-start, row, wrap);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2;
+  }
+  &-item {
+    @include flexbox();
+    padding: 5rem 3rem;
+    &:nth-child(1) {
+      border-bottom: solid 1px $gray-drak-color;
+    }
+    &:nth-child(2) {
+      border-bottom: solid 1px $gray-drak-color;
+    }
+    &:nth-child(3) {
+      border-bottom: solid 1px $gray-drak-color;
+    }
+  }
+  &-icon {
+    margin-right: 2.5rem;
+    color: $third-color;
+    font-size: 3rem;
+  }
+  &-title {
+    margin-bottom: 1.5rem;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    @include textClamp(1);
+  }
+  &-text {
+    font-family: $secondart-font;
+    line-height: 1.4;
+  }
+  &-content {
+    @include flexbox(flex-start, flex-start, column);
+  }
+  @include maxWidth(767px) {
+    margin-top: 5rem;
+    &-list {
+      grid-template-columns: 100%;
+    }
+    &-item:not(:last-child) {
+      border-bottom: solid 1px $gray-drak-color;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.devices {
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.836),
+      rgba(255, 255, 255, 0.719)
+    ),
+    url("../images/img-device-bg.png") no-repeat center / cover;
+  padding-top: 11rem;
+  &-image {
+    margin-bottom: -9.3rem;
+    display: inline-block;
+    @include absoluteCenter(left, relative);
+  }
+  @include maxWidth(767px) {
+    &-image {
+      max-width: 80%;
+      margin-bottom: -4.7rem;
+    }
+  }
+  @include maxWidth(413px) {
+    &-image {
+      max-width: 80%;
+      margin-bottom: -4.5rem;
+    }
+  }
+  @include maxWidth(410px) {
+    &-image {
+      max-width: 80%;
+      margin-bottom: -4rem;
+    }
+  }
+  @include maxWidth(374px) {
+    &-image {
+      max-width: 80%;
+      margin-bottom: -3.5rem;
+    }
+  }
+}

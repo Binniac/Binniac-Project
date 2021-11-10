@@ -1,0 +1,55 @@
+.number {
+  background-color: $third-color;
+  &-list {
+    @include flexbox(flex-start, center);
+  }
+  &-item {
+    padding: 8.8rem 3.2rem;
+    border-right: solid 1px white;
+    width: 20%;
+    color: white;
+    &:first-child {
+      border-left: solid 1px white;
+    }
+
+    text-align: center;
+  }
+  &-text {
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+  &-title {
+    font-size: 7.2rem;
+    font-weight: bold;
+    font-family: $secondart-font;
+    padding-bottom: 1rem;
+  }
+  @include minWidth(1025px) {
+    clip-path: polygon(0 0, 100% 0, 95% 49%, 100% 100%, 0 100%, 5% 49%);
+  }
+  @include maxWidth(1023px) {
+    &-item {
+      padding: 5rem 2rem;
+    }
+    &-title {
+      font-size: 5rem;
+    }
+  }
+  @include maxWidth(767px) {
+    &-list {
+      display: block;
+    }
+    &-item {
+      width: 100%;
+      padding: 3rem;
+      border-right: 0;
+      &:first-child {
+        border-left: 0;
+      }
+
+      &:not(:last-child) {
+        border-bottom: solid 1px white;
+      }
+    }
+  }
+}

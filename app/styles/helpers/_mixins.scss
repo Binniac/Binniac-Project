@@ -1,0 +1,113 @@
+@mixin size($width: 11rem, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin absoluteCenter($direction: "both", $position: absolute) {
+  position: $position;
+  @if $direction= "left" {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $direction == "top" {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @if $direction == "both" {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@mixin absoluteFull() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include size(100%);
+}
+@mixin maxWidth($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin minWidth($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin flexbox(
+  $align-item: stretch,
+  $justify-content: flex-start,
+  $direction: row,
+  $wrap: nowrap
+) {
+  display: flex;
+  align-items: $align-item;
+  justify-content: $justify-content;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+@mixin hideScroll() {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+@mixin textClamp($rows: 1, $size: 100%, $word: word-break) {
+  display: -webkit-box;
+  -webkit-line-clamp: $rows;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: $size;
+  max-width: $size;
+  white-space: pre-wrap;
+  word-break: $word;
+}
+@mixin hoverEffect(
+  $classItem: ".about-item",
+  $classContent: ".about-content",
+  $transiform: "true"
+) {
+  #{$classItem} {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s linear;
+    @if $transiform== "true" {
+      &::after {
+        content: "";
+        @include absoluteFull();
+        background-color: $third-color;
+        z-index: -1;
+        border-radius: 1rem;
+        transition: all 0.3s linear;
+      }
+      &:hover {
+        transform: translate(-1rem, -1rem);
+      }
+    }
+    &:hover {
+      #{$classContent} {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    &:hover::after {
+      transform: translate(1rem, 1rem);
+    }
+  }
+  #{$classContent} {
+    border-radius: 1rem;
+    @include absoluteFull();
+    transition: all 0.3s linear;
+    opacity: 0;
+    visibility: hidden;
+    background: linear-gradient(
+      to bottom,
+      rgba($primary-color, 0.7),
+      rgba($secondary-color, 0.7)
+    );
+    @include flexbox(center, center, column);
+  }
+}

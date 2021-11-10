@@ -1,0 +1,162 @@
+.footer {
+  &-top {
+    padding: 7.5rem 0 7rem;
+    @include flexbox(stretch, space-between);
+    border-bottom: solid 1px $gray-drak-color;
+  }
+  &-bottom {
+    text-align: center;
+    margin: 2rem 0;
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  &-Laaqiq {
+    color: $primary-color;
+  }
+  &-mogo {
+    width: calc(40% - 2.5rem);
+  }
+  &-blogs {
+    width: calc(35% - 4rem);
+  }
+  &-instagram {
+    width: calc(25% - 4rem);
+  }
+  &-heading {
+    height: 5rem;
+    margin-bottom: 2rem;
+  }
+  &-mogo-heading {
+    font-size: 4.6rem;
+    font-weight: bold;
+    color: $gray-drak-color;
+  }
+  &-mogo-desc {
+    color: $gray-drak-color;
+    font-size: 1.5rem;
+    font-family: $secondart-font;
+    line-height: 1.4;
+  }
+  &-follower {
+    padding: 5rem 0 2rem;
+    margin-bottom: 2rem;
+    color: black;
+    font-weight: bold;
+    font-size: 2.4rem;
+    font-family: $secondart-font;
+    border-bottom: solid 1px $gray-drak-color;
+  }
+  &-span {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+  &-social {
+    @include flexbox();
+    margin-bottom: 3.7rem;
+  }
+  &-social-name {
+    font-size: 2rem;
+    font-style: italic;
+    font-family: $secondart-font;
+    color: $gray-drak-color;
+    padding-right: 2.5rem;
+  }
+  &-social-item {
+    padding-right: 2rem;
+    font-size: 1.8rem;
+    color: $third-color;
+  }
+  &-form-input {
+    @include size(23rem, 4rem);
+    padding: 1.5rem 1rem;
+    outline: none;
+    border: 1px solid $gray-drak-color;
+    &::-webkit-input-placeholder {
+      /* Edge */
+      color: $gray-drak-color;
+      font-style: italic;
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $gray-drak-color;
+      font-style: italic;
+    }
+
+    &::placeholder {
+      color: $gray-drak-color;
+      font-style: italic;
+    }
+  }
+  &-form-button {
+    @include size(15rem, 4rem);
+    padding: 1.3rem 2.3rem;
+    border: 0;
+    background-color: $third-color;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+  }
+  &-form {
+    @include flexbox();
+  }
+  &-blogs-heading {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  &-blogs-item {
+    @include flexbox(center);
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+  &-blogs-title {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include textClamp(2);
+  }
+  &-blogs-date {
+    color: $gray-drak-color;
+    font-style: italic;
+  }
+  &-blogs-image {
+    margin-right: 2rem;
+  }
+  &-instagram-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 9rem 9rem 9rem;
+    grid-gap: 0.3rem;
+  }
+  &-instagram-text {
+    margin-top: 1rem;
+    color: $gray-drak-color;
+  }
+  @include maxWidth(1023px) {
+    &-top {
+      display: block;
+    }
+    &-mogo,
+    &-blogs,
+    &-instagram {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+    &-instagram {
+      margin-bottom: 0;
+      &-list {
+        display: grid;
+        grid-template-columns: 9rem 9rem 9rem;
+        grid-template-rows: 9rem 9rem 9rem;
+        grid-gap: 0.3rem;
+      }
+    }
+  }
+  @include maxWidth(767px) {
+    &-top {
+      padding: 5rem 0;
+    }
+  }
+}

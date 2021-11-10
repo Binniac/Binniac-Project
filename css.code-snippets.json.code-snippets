@@ -1,0 +1,187 @@
+{
+  "center item flex": {
+    "prefix": "flexCenter",
+    "body": [
+      "display: flex;",
+      "align-items: center;",
+      "justify-content: center;",
+      ""
+    ],
+    "description": "center item flex"
+  },
+  "before or after": {
+    "prefix": "beforeCenter",
+    "body": [
+      "content: \"\";",
+      "position: absolute;",
+      "left: 50%;",
+      "top: 50%;",
+      "transform: translate(-50%, -50%);",
+      ""
+    ],
+    "description": "before or after"
+  },
+  "css for image": {
+    "prefix": "imgCover",
+    "body": [
+      "width: 100%;",
+      "height: 100%;",
+      "object-fit: cover;",
+      "border-radius: 1rem;",
+      "border: solid 2px #ccc;"
+    ],
+    "description": "css for image"
+  },
+  "size": {
+    "prefix": "size",
+    "body": ["width: 10rem;", "height: 10rem;", ""],
+    "description": "size"
+  },
+  "transition": {
+    "prefix": "tra",
+    "body": ["transition: all 0.2s ease;", ""],
+    "description": "transition"
+  },
+  "filter": {
+    "prefix": "filterImg",
+    "body": [
+      "display: block;",
+      "max-width: 100%;",
+      "filter: grayscale(2);",
+      "transition: 0.25s linear;",
+      ""
+    ],
+    "description": "filter"
+  },
+  "center div": {
+    "prefix": "divcenter",
+    "body": ["margin: 5rem auto;", "width: max-content;"],
+    "description": "center div"
+  },
+  "absoluteFullsize": {
+    "prefix": "absolute-full",
+    "body": [
+      "position: absolute;",
+      "top: 0;",
+      "left: 0;",
+      "width: 100%;",
+      "height: 100%;"
+    ],
+    "description": "absoluteFullsize"
+  },
+  "custom scrollbar": {
+    "prefix": "scrollbar",
+    "body": [
+      "body::-webkit-scrollbar {",
+      "  width: 1em;",
+      "}",
+      " ",
+      "body::-webkit-scrollbar-track {",
+      "  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);",
+      "}",
+      " ",
+      "body::-webkit-scrollbar-thumb {",
+      "  background-color: darkgrey;",
+      "  outline: 1px solid slategrey;",
+      "}"
+    ],
+    "description": "custom scrollbar"
+  },
+  "textgradient": {
+    "prefix": "textGradient",
+    "body": [
+      ".text{",
+      " color: #ffa400;",
+      "}",
+      "@supports (-webkit-background-clip: text){",
+      " .text {",
+      "  color: transparent;",
+      "  background-image: linear-gradient...",
+      "  -webkit-background-clip: text;",
+      " }",
+      "}"
+    ],
+    "description": "textgradient"
+  },
+  "textlong": {
+    "prefix": "textlong",
+    "body": [
+      ".title{",
+      "  white-space: nowrap;",
+      "  text-overflow: ellipse;",
+      "  overflow: hidden;",
+      "}"
+    ],
+    "description": "textlong"
+  },
+  "custom text long": {
+    "prefix": "textlongedit",
+    "body": [
+      ".title{",
+      " display: -webkit-box;",
+      " -webkit-line-clamp: 3; // số dòng muốn hiển thị",
+      " -webkit-box-orient: vertical;",
+      " text-overflow: ellipse;",
+      " overflow: hidden;",
+      "}"
+    ],
+    "description": "custom text long"
+  },
+  "responsive media": {
+    "prefix": "responsive-meida",
+    "body": [
+      ".video {",
+      "  position: relative;",
+      "  padding-bottom: 56.25%; /* 16:9 */",
+      "  height: 0;",
+      "}",
+      ".video iframe {",
+      "  position: absolute;",
+      "  top: 0;",
+      "  left: 0;",
+      "  width: 100%;",
+      "  height: 100%;",
+      "}"
+    ],
+    "description": "responsive media"
+  },
+  "spam text": {
+    "prefix": "fixspamtext",
+    "body": ["word-break: break-word,;", "//or break-all;"],
+    "description": "spam text"
+  },
+  "css placeholder": {
+    "prefix": "placeholder",
+    "body": [
+      "::-webkit-input-placeholder { /* Chrome/Opera/Safari */",
+      "  color: pink;",
+      "}",
+      "::-moz-placeholder { /* Firefox 19+ */",
+      "  color: pink;",
+      "}",
+      ":-ms-input-placeholder { /* IE 10+ */",
+      "  color: pink;",
+      "}",
+      ":-moz-placeholder { /* Firefox 18- */",
+      "  color: pink;",
+      "}"
+    ],
+    "description": "css placeholder"
+  },
+  "center grid": {
+    "prefix": "gridCenter",
+    "body": ["display:grid;", "place-items:center;"],
+    "description": "center grid"
+  },
+  "css background": {
+    "prefix": "background",
+    "body": [
+      "background-color: bule;",
+      "background-image: url();",
+      "background-repeat: no-repeat;",
+      "background-position: center center;",
+      "background-attachment: fixed;"
+    ],
+    "description": "css background"
+  }
+}
